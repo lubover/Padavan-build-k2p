@@ -130,3 +130,11 @@ jobs:
       with:
         name: Padavan-packages
         path: /opt/images
+        
+    - name: Upload release  
+      uses: softprops/action-gh-release@v1
+      if: always()
+      with:
+        name: release_tag::$(date +"%Y.%m.%d-K2P")
+        path: /opt/images
+        
