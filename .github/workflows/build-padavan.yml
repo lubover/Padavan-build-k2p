@@ -135,6 +135,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: always()
       with:
+        token: ${{ secrets.RELEASE_TOKEN }}
         name: release_tag::$(date +"%Y.%m.%d-K2P")
         path: /opt/images
         
